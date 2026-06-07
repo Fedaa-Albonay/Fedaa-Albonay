@@ -652,3 +652,154 @@ textarea:focus {
         top: 74px;
     }
 }
+
+/* ==================================================
+   19. Extra Responsive Fixes - Small Screens
+   ================================================== */
+
+@media (max-width: 900px) {
+    .hero {
+        min-height: auto;
+        padding-top: 120px;
+    }
+
+    .hero-grid {
+        text-align: center;
+    }
+
+    .hero-text {
+        margin: 0 auto;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .socials {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .project div:last-child {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: min(100% - 32px, 1120px);
+    }
+
+    .section {
+        padding: 75px 0;
+    }
+
+    .hero {
+        padding-top: 110px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+        line-height: 1.1;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+        min-height: 32px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .hero-actions {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .socials {
+        max-width: 280px;
+        margin: 0 auto;
+        gap: 12px;
+    }
+
+    .socials a {
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+    }
+
+    .hero-card {
+        max-width: 330px;
+        margin: 0 auto 28px;
+    }
+
+    .badge {
+        bottom: 24px;
+        left: 24px;
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+    .section-title {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .project div:last-child {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project div:last-child a {
+        width: 100%;
+        padding: 10px 14px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        text-align: center;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .footer a {
+        margin: 6px 8px;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .socials {
+        max-width: 240px;
+    }
+
+    .socials a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .btn,
+    .nav-cta {
+        padding: 12px 18px;
+        font-size: 14px;
+    }
+}
