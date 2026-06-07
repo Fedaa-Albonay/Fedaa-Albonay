@@ -3,11 +3,28 @@ const path = require('path');
 const helmet = require('helmet');
 const cors = require('cors');
 const morgan = require('morgan');
-const nodemailer = require('nodemailer');
+const mongoose = require('mongoose');
 require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log('MongoDB connected'))
+  .catch((err) => console.error('MongoDB connection error:', err.message));
+
+const messageSchema = new mongoose.Schema(
+  {
+    name: String,
+    email: String,
+    subject: String,
+    message: String,
+  },
+  { timestamps: true }
+);
+
+const Message = mongoose.model('Message', messageSchema);
 
 app.use(helmet({ contentSecurityPolicy: false }));
 app.use(cors());
@@ -27,46 +44,24 @@ app.post('/api/contact', async (req, res) => {
   }
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   if (!emailRegex.test(email)) {
     return res.status(400).json({ success: false, message: 'Please enter a valid email.' });
   }
 
   try {
-    if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
-      console.log('New contact message:', { name, email, subject, message });
-      return res.json({ success: true, message: 'Message received locally. Configure SMTP to send emails.' });
-    }
+    await Message.create({ name, email, subject, message });
 
-    const transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      port: 465,
-      secure: true,
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS
-      },
-      connectionTimeout: 10000
+    res.json({
+      success: true,
+      message: 'Message sent successfully.',
     });
-
-    await transporter.sendMail({
-      from: `Portfolio Contact <${process.env.SMTP_USER}>`,
-      to: process.env.CONTACT_EMAIL || process.env.SMTP_USER,
-      replyTo: email,
-      subject: `Portfolio Message: ${subject}`,
-      html: `
-        <h2>New Portfolio Message</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Subject:</strong> ${subject}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message}</p>
-      `
-    });
-
-    res.json({ success: true, message: 'Message sent successfully.' });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ success: false, message: 'Server error. Please try again later.' });
+    console.error('Contact save error:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Server error. Please try again later.',
+    });
   }
 });
 
