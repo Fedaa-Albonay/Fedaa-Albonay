@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <meta
+            name="description"
+            content="Professional full stack software engineer portfolio for Fedaa Albonay, featuring web development projects, skills, vision, and contact information."
+        />
+        <meta
+            name="keywords"
+            content="Fedaa Albonay, Software Engineer, Full Stack Developer, Web Developer, Portfolio, JavaScript, Node.js, React, GitHub"
+        />
+        <meta name="author" content="Fedaa Albonay" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Fedaa Albonay | Full Stack Software Engineer" />
+        <meta
+            property="og:description"
+            content="Modern full stack software engineer portfolio showcasing projects, skills, and professional vision."
+        />
+        <meta property="og:image" content="assets/logo.jpeg" />
+
+        <meta name="theme-color" content="#0b1020" />
+
+        <title>Fedaa Albonay | Full Stack Software Engineer</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <div class="loader" id="loader">
+            <img src="assets/logo.jpeg" alt="Fedaa Albonay logo" />
+            <span>Loading Portfolio...</span>
+        </div>
+
+        <div class="progress" id="progress"></div>
+        <div class="cursor"></div>
+        <div class="particles" id="particles"></div>
+
+        <header class="header" id="header">
+            <nav class="nav container" aria-label="Main navigation">
+                <a class="brand" href="#home" aria-label="Fedaa Albonay home">
+                    <img src="assets/logo.jpeg" alt="Fedaa Albonay logo" />
+                    <span>Fedaa</span>
+                </a>
+
+                <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#vision">Vision</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <a class="nav-cta" href="#contact">Hire Me</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- ================= HERO SECTION ================= -->
+            <section class="hero section" id="home">
+                <div class="container hero-grid reveal">
+                    <div class="hero-content">
+                        <p class="eyebrow">Hello, I'm</p>
+
+                        <h1>Fedaa Albonay</h1>
+
+                        <h2>
+                            <span id="typing"></span>
+                        </h2>
+
+                        <p class="hero-text">
+                            I build modern, responsive and scalable web applications using front-end creativity and
+                            back-end logic.
+                        </p>
+
+                        <div class="hero-actions">
+                            <a class="btn primary" href="#projects">View Projects</a>
+                            <a class="btn ghost" href="assets/Fedaa-Albonay-CV.pdf" download> Download CV </a>
+                        </div>
+
+                        <div class="socials">
+                            <a href="#" aria-label="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+
+                            <a href="#" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+
+                            <a href="mailto:fedaaalbonay1@gmail.com" aria-label="Email">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="hero-card">
+                        <img src="assets/hero.jpeg" alt="Professional portrait of Fedaa Albonay" />
+                        <div class="badge">Full Stack Developer</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= ABOUT SECTION ================= -->
+            <section class="section" id="about">
+                <div class="container split reveal">
+                    <div class="image-frame">
+                        <img src="assets/about.jpeg" alt="Fedaa Albonay formal photo" />
+                    </div>
+
+                    <div>
+                        <p class="eyebrow">About Me</p>
+
+                        <h2 class="section-title">Software Engineer with a passion for clean digital experiences.</h2>
+
+                        <p class="muted">
+                            I focus on creating responsive interfaces, structured code, and practical full stack
+                            solutions. My goal is to combine design, performance, and functionality to deliver websites
+                            that feel professional and work smoothly on every device.
+                        </p>
+
+                        <div class="stats">
+                            <div>
+                                <strong>20+</strong>
+                                <span>Projects</span>
+                            </div>
+
+                            <div>
+                                <strong>100%</strong>
+                                <span>Dedication</span>
+                            </div>
+
+                            <div>
+                                <strong>Full</strong>
+                                <span>Stack Focus</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= SKILLS SECTION ================= -->
+            <section class="section" id="skills">
+                <div class="container reveal">
+                    <p class="eyebrow center">Skills</p>
+
+                    <h2 class="section-title center">Technologies I Work With</h2>
+
+                    <div class="cards skills-grid">
+                        <article class="card">
+                            <i class="fa-solid fa-code"></i>
+                            <h3>Frontend</h3>
+                            <p>HTML5, CSS3, JavaScript, React, Tailwind, Bootstrap</p>
+                        </article>
+
+                        <article class="card">
+                            <i class="fa-solid fa-server"></i>
+                            <h3>Backend</h3>
+                            <p>Node.js, Express.js, REST API, Authentication, MVC</p>
+                        </article>
+
+                        <article class="card">
+                            <i class="fa-solid fa-database"></i>
+                            <h3>Database</h3>
+                            <p>MongoDB, MySQL, Data Modeling, CRUD Operations</p>
+                        </article>
+
+                        <article class="card">
+                            <i class="fa-brands fa-git-alt"></i>
+                            <h3>Tools</h3>
+                            <p>Git, GitHub, VS Code, Figma, Deployment, SEO</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= PROJECTS SECTION ================= -->
+            <section class="section" id="projects">
+                <div class="container reveal">
+                    <p class="eyebrow center">Projects</p>
+
+                    <h2 class="section-title center">Selected Work</h2>
+
+                    <div class="filters">
+                        <button class="filter active" data-filter="all">All</button>
+                        <button class="filter" data-filter="frontend">Frontend</button>
+                        <button class="filter" data-filter="fullstack">Full Stack</button>
+                    </div>
+
+                    <div class="cards project-grid">
+                        <!-- ZAJEL PROJECT -->
+                        <article class="project card" data-category="fullstack">
+                            <div class="project-img">ZAJEL</div>
+
+                            <h3>ZAJEL Delivery Service</h3>
+
+                            <p>
+                                Modern delivery and logistics platform built with a responsive user interface, service
+                                management workflow, and scalable architecture.
+                            </p>
+
+                            <span>HTML · CSS · JavaScript · Node.js · Express</span>
+
+                            <div>
+                                <a href="https://zajel-delivery-services.vercel.app/" target="_blank">Live Demo</a>
+                                <a href="https://github.com/Fedaa-Albonay/zajel-delivery-services" target="_blank">GitHub</a>
+                            </div>
+                        </article>
+
+                        <!-- TASK MANAGER PROJECT -->
+                        <article class="project card" data-category="fullstack">
+                            <div class="project-img">TASK</div>
+
+                            <h3>Task Manager App</h3>
+
+                            <p>
+                                Full stack productivity application with authentication, personal dashboard, task
+                                management, status tracking, and responsive modern design.
+                            </p>
+
+                            <span>React · Node.js · Express · MongoDB · JWT</span>
+
+                            <div>
+                                <a href="https://task-manager-app-five-mauve.vercel.app/" target="_blank">
+                                    Live Demo
+                                </a>
+
+                                <a href="https://github.com/Fedaa-Albonay/task-manager-app" target="_blank"> GitHub </a>
+                            </div>
+                        </article>
+
+                        <!-- ROSATTI PROJECT -->
+                        <article class="project card" data-category="fullstack">
+                            <div class="project-img">FOOD</div>
+
+                            <h3>Rosetti Restaurant</h3>
+
+                            <p>
+                                Restaurant management and online ordering platform currently under development with a
+                                modern customer experience and administrative dashboard.
+                            </p>
+
+                            <span>React · Node.js · MongoDB</span>
+
+                            <div>
+                                <a href="https://rosetti-restaurant.vercel.app/" target="_blank">Live Demo</a>
+                                <a href="https://github.com/Fedaa-Albonay/rosetti-restaurant" target="_blank">GitHub</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= VISION SECTION ================= -->
+            <section class="section vision" id="vision">
+                <div class="container reveal">
+                    <p class="eyebrow center">Vision</p>
+
+                    <h2 class="section-title center">Building solutions that create value.</h2>
+
+                    <p class="vision-text">
+                        My vision is to become a highly skilled software engineer who develops innovative digital
+                        products that solve real problems, improve businesses, and create meaningful user experiences.
+                    </p>
+                </div>
+            </section>
+
+            <!-- ================= CONTACT SECTION ================= -->
+            <section class="section" id="contact">
+                <div class="container split reveal">
+                    <div>
+                        <p class="eyebrow">Contact</p>
+
+                        <h2 class="section-title">Let's build something great.</h2>
+
+                        <p class="muted">
+                            Available for internships, freelance work, portfolio projects, and web development
+                            opportunities.
+                        </p>
+
+                        <div class="contact-info">
+                            <p>
+                                <i class="fa-solid fa-envelope"></i>
+                                fedaaalbonay1@gmail.com
+                            </p>
+
+                            <p>
+                                <i class="fa-solid fa-location-dot"></i>
+                                United Arab Emirates
+                            </p>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contactForm">
+                        <input name="name" placeholder="Your Name" required />
+                        <input name="email" type="email" placeholder="Your Email" required />
+                        <input name="subject" placeholder="Subject" required />
+
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+
+                        <button class="btn primary" type="submit">Send Message</button>
+
+                        <p id="formStatus"></p>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="footer">
+            <div class="container footer-grid">
+                <div>
+                    <img src="assets/logo.jpeg" alt="Fedaa logo" />
+                    <h3>Fedaa Albonay</h3>
+                    <p>Full Stack Software Engineer</p>
+                </div>
+
+                <div>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+
+            <p class="copy">© 2026 Fedaa Albonay. All Rights Reserved.</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
